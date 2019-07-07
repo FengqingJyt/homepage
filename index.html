@@ -1,3 +1,72 @@
-<h1>
-    Hello,风倾
-</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面编码 -->
+    <meta content="text/html; charset=utf-8">
+    <!-- 页面标题 -->
+    <title>lalala</title>
+    <!-- 引入 ECharts 文件 -->
+    <script src="./libs/echarts.min.js"></script>
+    <!-- 页面样式 -->
+    <style>
+        * {
+            font-family: KaiTi, serif;
+        }
+
+        /* #main {
+            width: 600px;
+            height: 400px;
+        } */
+    </style>
+</head>
+<!-- 页面内容区域 -->
+
+<body>
+    <h1>hello 风倾</h1>
+    <h2>hello 风倾</h2>
+    <h3>hello 风倾</h3>
+    <h4>hello 风倾</h4>
+    <h5>hello 风倾</h5>
+    <h6>hello 风倾</h6>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main" style="height:600px;width:400px;"></div>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data: ['销量']
+            },
+            xAxis: {
+                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // var data = {
+        //     msg: 'sucess',
+        //     data: [7, 2, 3, 4, 5, 6]
+        // }
+        // option.series[0].data = option.series[0].data.map(function (item, index) {
+        //     return item + data.data[index]
+        // })
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
